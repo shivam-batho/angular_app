@@ -1,0 +1,72 @@
+There are Two TYpe of Routing Strategies
+    HashLocationStrategy
+    PathLocationStrategy
+
+app.module.ts
+import { LocationStrategy , HashLocationStrategy} from '@angular/common';
+  providers: [
+    {provide:LocationStrategy , useClass:HashLocationStrategy}
+  ],
+
+================================ Base HREF===========================
+for building purpose
+ng build --base-href="/demo"
+
+===========================Router Module===================
+ng generate module app-routing--flat-module =app
+
+@import {Routes,RouterModule} from '@angular/router'
+
+app-routing.modules.ts
+const routes = [
+
+]
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+
+import the module on AppModule File
+
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    TodoModule,
+    FormsModule
+  ],
+
+  ============================Router Outlet ===========================
+  app-routing
+  import {TasksComponent} from './tasks/tasks.component';
+  const routes: Routes = [
+    {path:"learning" , component:TasksComponent}
+  ];
+
+======================configuring Routes=======================
+path
+component
+redirect to 
+children
+
+  {path:"products-edit/10" , component:ProductsEditComponent},
+
+==========================Parameterized Routes ==================
+import { Router, ActivatedRoute, Params } from '@angular/router';
+  paramQuery ='';
+  constructor(private activatedRoute: ActivatedRoute) {}
+   
+
+  ngOnInit(): void {
+    this.activatedRoute.params.subscribe(data  => {
+      this.paramQuery = data.id;
+      });
+  }
+
+
+  {path:"products-edit/:id" , component:ProductsEditComponent},
+
+      this.paramQuery = data.id2;
+    {path:"products-edit/:id/:id2" , component:ProductsEditComponent},
+
+
+==============================================query Params 

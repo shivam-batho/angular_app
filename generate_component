@@ -1,0 +1,4 @@
+ng g c tasks
+
+cd .src/app/todo 
+ng g c completed-task

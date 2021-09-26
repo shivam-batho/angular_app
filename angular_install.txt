@@ -1,0 +1,43 @@
+npm install -g @angular/cli@latest
+ng new firstApp
+ng serve
+
+======================How to install Bootstrap===============
+npm i bootstrap
+style.css/
+@import '~bootstrap/dist/css/bootstrap.min.css'
+
+
+//to install mysql into angular projects
+npm i mysql
+=======================================Angular cli ========================================
+ng new <project-name>
+ng --version
+
+ng generate component login (generate is used to make component and pipeline etc)
+Or 
+ng g c login
+
+ng serve --port=4300
+ng test (it will test spec.ts file and unit test are written in jasmine framework)
+
+ng e2e
+
+ng update 
+
+ng build 
+
+ng lint  (code syntax linting)
+
+
+====================Generate Module todo===========
+ng generate module todo
+
+//add this to app.module.ts
+import { TodoModule } from './todo/todo.module';
+
+imports: [
+    BrowserModule,
+    AppRoutingModule,
+    TodoModule
+  ],

@@ -1,0 +1,34 @@
+1)Built in Pipes
+lowercase
+uppercase
+percent 
+currency
+date
+Json
+
+<div>{{user.firstName | lowercase}} {{user.lastName | uppercase}}</div>
+<div>{{ user.dob | date:'MMMM dd'}}</div>
+
+===============================================================
+2)Parameterized Pipes
+<div>{{ user.salary | currency:'INR':'code':'3.0-1'}}</div>
+<div>{{ user.dob | date:'longDate'}}</div>
+<div>{{ user.dob | date:'long'}}</div>
+<div>{{ user.dob | date:'short'}}</div>
+
+3)Chaining Pipes
+Multiple pipes on data input is called as Chaining Pipes 
+    <div>{{ user.dob | date:'MMMM'|uppercase}}</div>   
+
+4)Custom Pipes
+ng generate pipe highlight(name)
+ <div>{{user.city | highlight : user.city}}</div>
+
+<div [innerHTML] ="user.city | highlight:user.city"></div>
+
+import { DomSanitizer } from '@angular/platform-browser';
+constructor(private sanitizer:DomSanitizer){}
+  transform(value: string, city: string): any {
+    return this.sanitizer.bypassSecurityTrustHtml('<b style="background-color:red"> City Name is: ' + city + '</b>');
+  }
+
