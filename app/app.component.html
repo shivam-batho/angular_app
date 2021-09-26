@@ -1,0 +1,82 @@
+<h1 class="bg-primary">Welcome to Angular Project Over Here</h1>
+<!-- <app-tasks></app-tasks>
+<app-completed-task></app-completed-task> -->
+<!-- <h1>
+    Switch statement
+</h1>
+<div [ngSwitch]="switchValue">
+    <div *ngSwitchCase="'add'">This is an Example of Add Statement</div>
+    <div *ngSwitchCase="'mul'">This is an Example of mul Statement</div>
+    <div *ngSwitchCase="'sub'">This is an Example of sub Statement</div>
+    <div *ngSwitchCase=" 'div' ">This is an Example of div Statement</div>
+    <div *ngSwitchDefault>This is an Example of Default Case</div>
+</div> -->
+
+
+<!-- <h4 [ngClass]=" [loop1 , loop2] ">For Loop</h4> -->
+<!-- <h4 [ngClass]="{'loop1':false , 'loop2' : true} ">For Loop</h4>
+<table [ngClass]=" 'table table-striped' ">
+    <thead>
+        <th>User Id</th>
+        <th>User Name</th>
+        <th>Index </th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Even</th>
+        <th>Odd</th>
+    </thead>
+    <tbody>
+        <tr *ngFor='let user of users ; index as i;first as f;last as l;even as e;odd as o'>
+            <td [ngStyle]="{ 'color': colorVal , 'font-size' : '24 px'}">{{ user.userId}}</td>
+            <td>{{ user.firstName}}</td>
+            <td>{{ i }}</td>
+            <td>{{ f }}</td>
+            <td>{{ l }}</td>
+            <td>{{ e }}</td>
+            <td>{{ o }}</td>
+
+        </tr>
+    </tbody>
+</table> -->
+<!-- THis is an Example of Data Binding  -->
+<!-- <p [innerHTML] = " para " > </p>
+<input type="text" name="text" [placeholder] = "placeholderVal" /> -->
+
+<!-- THis is an Example of attribute Binding -->
+<!-- <a [href]="hrefVal" [attr.updateLink] = "updateLink" [attr.data-link] = "updateLink">Google </a>
+<hr /> -->
+<!-- THis is an Example of event Binding that flows from view to component -->
+<!-- <button (click) = "showAlert();" class="btn btn-primary">Click Here To View</button>
+<hr />
+<input (focus) ="consoleLog();"/>
+<hr/> -->
+<!-- This is an Example of Two way Data Binding Example  property and event Binding-->
+<!-- <input [(ngModel)] = "firstName" placeholder ="example of Two way data Binding"/><br />
+<button (click) ="readFirstName();" class ="btn btn-success">Read First Name</button>
+<p> {{ firstName }} </p> -->
+
+<!-- THis is an Example of Pipes -->
+<!-- <div>{{user.firstName | lowercase}} {{user.lastName | uppercase}}</div>
+<div>{{ user.dob | date:'MMMM dd'}}</div>
+<div>{{ user.dob | date:'longDate'}}</div>
+<div>{{ user.salary | currency:'INR':'code':'3.0-1'}}</div>
+<div>{{ user | json}}</div> -->
+
+<!-- THis is an Example of Chaining Pipes
+        Multiple pipes on data input is called as Chaining Pipes -->
+        <!-- <div>{{ user.dob | date:'MMMM'|uppercase}}</div>       -->
+<!-- this is an Example of Custom Pipes -->
+<!-- <div>
+    {{user.city | highlight : user.city}}
+
+</div> -->
+<!-- <div [innerHTML] ="user.city | highlight:user.city"></div> -->
+
+<ul>
+    <li><a href="/#/products" >Product Add</a></li>
+    <li><a href="/#/products-view" >Product view</a></li>
+    <li><a href="/#/products-edit/" >Product edit</a></li>
+
+</ul>
+
+<router-outlet></router-outlet>
